@@ -141,7 +141,7 @@ pre
     <div id="messages">
 	<p>Status Messages</p>
 	</div>
-  
+  <script type="text/javascript" src="name_list.json"> </script>
   <script>
 
 
@@ -211,7 +211,13 @@ pre
 	if (window.File && window.FileList && window.FileReader) {
 		Init();
 	}
-
+	
+	var ep_list = JSON.parse(name_list);
+	alert(ep_list[0].extention_ident);
+	alert(ep_list[0].EP1);
+	alert(ep_list[1].extention_ident);
+	alert(ep_list[1].EP1);
+	
 	function compareOBO () {
 	
 	}
