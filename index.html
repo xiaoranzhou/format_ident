@@ -7,7 +7,7 @@ body
 {
 	font-family: Helvetica;
 	font-size: 100%;
-
+	height: 100vh
 
 	
 }
@@ -43,13 +43,13 @@ h2
 	display: none;
 	font-weight: bold;
 	text-align: center;
-	padding: 1em 0;
+	#padding: 1em 0;
 	margin: 1em 0;
 	color: #333;
 	border: 2px dashed #333;
-	border-radius: 0px;
+	#border-radius: 0px;
 	cursor: default;
-	height: 15vh;
+	#height: 15vh;
 	
 }
 
@@ -103,7 +103,7 @@ form {
 	position: sticky;
 	z-index: 100;
 	top: 0;
-	height: 20vh;
+	#height: 20vh;
 }	
 table thead tr th  {
   /* you could also change td instead th depending your html code */
@@ -111,7 +111,7 @@ table thead tr th  {
   position: sticky;
   
   z-index: 100;
-  top:   20vh;
+  #top:   20vh;
 
 }
 
@@ -145,43 +145,44 @@ top: 1px;
 }
 
 </style>
-		<meta charset="UTF-8">
-			<title>omics raw data format identifier</title>
-		</head>
-		<body>
-			<div class="banner" id="banner">
+<meta charset="UTF-8">
+	<title>omics raw data format identifier</title>
+</head>
+<body>
+	<div class="banner" id="banner">
 	
 			</div>
-			<form id="choose file" action="index.html" method="POST" enctype="multipart/form-data">
-				<div>
-					<label for="fileselect"/>
-					<div id="filedrag">drop files here or choos file in traditional way:
+	<form id="choose file" action="index.html" method="POST" enctype="multipart/form-data">
+		<div>
+			<label for="fileselect"/>
+			<div id="filedrag">drop files here or click inside the dashed area:
 					
-					<div id= "button" >
+					<div id="button">
 					<input type="file" id="fileselect" name="fileselect[]" multiple="multiple"/>
-					 <h1 id="click"  >☝</h1>
-					</div>	
-					</div>
-				
+					<h1 id="click">☝</h1>
 				</div>
-				<div id="submitbutton">
-					<button type="submit">Upload Files</button>
-				</div>
-			</form>
-			<table id="file-table" style="width:100%">
-  <thead>
-    <tr>
-      <th>file name</th>
-      <th>size</th>
-      <th>extension</th>
-	  <th>omics</th>
-	  <th>endpoint repositories</th>
-    </tr>
-  </thead>
- <tbody>
+			</div>
+		</div>
+		<div id="submitbutton">
+			<button type="submit">Upload Files</button>
+		</div>
+	</form>
+	<div>
+		<table id="file-table" style="width:100%">
+			<thead>
+				<tr>
+					<th>file name</th>
+					<th>size</th>
+					<th>extension</th>
+					<th>omics</th>
+					<th>endpoint repositories</th>
+				</tr>
+			</thead>
+			<tbody>
      
   </tbody>
-</table>
+		</table>
+		<div>
 			<script type="module">
 	import name_list from "./js/name_list.json" assert { type: "json" };
 	
